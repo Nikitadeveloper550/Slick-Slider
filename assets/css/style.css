@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.header {
+    font-family: "Roboto";
+    font-weight: 400;
+    line-height: 56.4px;
+    animation: mymove 5s ease-out infinite;
+}
+
+@keyframes mymove {
+    0% {
+        transform: scale(0, 0);
+        color: white;
+        /* transform: rotateX(0deg); */
+    }
+
+    100% {
+        transform: scale(1.2, 1.2);
+        color: white;
+        font-weight: 600;
+        font-size: larger;
+        /* transform: rotateX(360deg); */
+    }
+}
+
+.bg-blue {
+    background-color: rgba(20, 13, 27);
+}
+
+.card {
+    background-color: rgba(20, 15, 64);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+
+.lg-text {
+    font-family: "roboto";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    padding-left: 24px;
+    padding-bottom: 0%;
+    padding-top: 22px;
+}
+
+.sm-text {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(204, 206, 216);
+    padding-left: 24px;
+    padding-top: 0%;
+    padding-bottom: 22px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.slick-track {
+    display: flex;
+    gap: 20px;
+}
+
+
+.slick-dots li button:before {
+    content: unset;
+}
+
+.slick-dots li {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 21px;
+    transition: 200ms linear width;
+}
+
+.slick-dots li.slick-active {
+    width: 59px;
+    background-color: rgba(18, 25, 210, 1);
+}
+
+
+.right-circle {
+    background: rgba(27, 50, 165, 1);
+    filter: blur(210px);
+    border-radius: 50%;
+    height: 331px;
+    width: 331px;
+    position: absolute;
+    bottom: 0%;
+    left: -18%;
+    z-index: 1;
+    animation: circle 5s infinite;
+}
+
+.left-circle {
+    background: rgba(27, 50, 165, 1);
+    filter: blur(210px);
+    border-radius: 50%;
+    height: 331px;
+    width: 331px;
+    position: absolute;
+    top: 0%;
+    right: -18%;
+    z-index: 1;
+    animation: circle 5s infinite;
+}
+
+@keyframes circle {
+    from {
+        background-color: rgba(27, 50, 165, 1);
+    }
+
+    to {
+        background-color: rgb(51, 126, 212);
+    }
+}
+
+img[Alt="stars"] {
+    position: absolute;
+    animation: spin 5000ms infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.star-1 {
+    top: 52%;
+    left: -10%;
+}
+
+.star-2 {
+    top: 57%;
+    left: -14%;
+}
+
+.star-3 {
+    top: 61%;
+    left: -11%;
+}
+
+.star-4 {
+    top: 63%;
+    left: -5%;
+    color: rgba(87, 84, 111, 1);
+}
+
+@media (max-width:576px) {
+    .right-circle {
+        visibility: hidden;
+
+    }
+
+    .left-circle {
+        visibility: hidden;
+    }
+}
+
+@media (min-width:1320px) {
+    .card.slick-slide.slick-current.slick-active+div  {
+        border: 2px solid rgba(18, 25, 210);
+    }
+}
