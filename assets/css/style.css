@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-
+/* section-1 */
 .header {
     font-family: "Roboto";
     font-weight: 400;
@@ -10,17 +11,17 @@
 
 @keyframes mymove {
     0% {
-        transform: scale(0, 0);
+        /* transform: scale(0, 0);*/
         color: white;
-        /* transform: rotateX(0deg); */
+        transform: rotateX(0px);
     }
 
     100% {
-        transform: scale(1.2, 1.2);
+        /* transform: scale(1.2, 1.2);*/
         color: white;
         font-weight: 600;
         font-size: larger;
-        /* transform: rotateX(360deg); */
+        transform: rotateX(360deg);
     }
 }
 
@@ -69,7 +70,6 @@
     gap: 20px;
 }
 
-
 .slick-dots li button:before {
     content: unset;
 }
@@ -80,6 +80,7 @@
     background-color: white;
     border-radius: 21px;
     transition: 200ms linear width;
+    margin-top: 40px;
 }
 
 .slick-dots li.slick-active {
@@ -87,40 +88,35 @@
     background-color: rgba(18, 25, 210, 1);
 }
 
-
-.right-circle {
+.rounded-circle {
     background: rgba(27, 50, 165, 1);
-    filter: blur(210px);
+    filter: blur(200px);
     border-radius: 50%;
     height: 331px;
     width: 331px;
     position: absolute;
-    bottom: 0%;
-    left: -18%;
     z-index: 1;
     animation: circle 5s infinite;
 }
 
-.left-circle {
-    background: rgba(27, 50, 165, 1);
-    filter: blur(210px);
-    border-radius: 50%;
-    height: 331px;
-    width: 331px;
-    position: absolute;
+.right-position {
+    bottom: 0%;
+    left: -18%;
+}
+
+.left-position {
     top: 0%;
     right: -18%;
-    z-index: 1;
-    animation: circle 5s infinite;
 }
 
 @keyframes circle {
     from {
         background-color: rgba(27, 50, 165, 1);
+
     }
 
     to {
-        background-color: rgb(51, 126, 212);
+        background-color: rgb(45, 123, 212);
     }
 }
 
@@ -160,10 +156,34 @@ img[Alt="stars"] {
     color: rgba(87, 84, 111, 1);
 }
 
+/* section-2 */
+.header-2 {
+    font-family: "Plus Jakarta Sans";
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 55.44px;
+    color: white;
+}
+
+.bg-color {
+    background: rgba(2, 13, 21, 1);
+}
+
+.card-color {
+    background: rgba(3, 137, 255, 0.12);
+}
+
+.para {
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 30px;
+}
+
 @media (max-width:576px) {
     .right-circle {
         visibility: hidden;
-
     }
 
     .left-circle {
@@ -171,8 +191,36 @@ img[Alt="stars"] {
     }
 }
 
-@media (min-width:1320px) {
-    .card.slick-slide.slick-current.slick-active+div  {
+@media (min-width:1319.98px) {
+    .card.slick-slide.slick-current.slick-active+div {
         border: 2px solid rgba(18, 25, 210);
     }
+}
+
+@media (max-width:991.98px) {
+    .card.slick-slide.slick-current.slick-active+div {
+        border: 2px solid rgba(18, 25, 210);
+    }
+
+    .rounded-circle {
+        display: none;
+    }
+
+    .card {
+        height: 380px;
+    }
+}
+
+@media (max-width:768px) {
+    .card {
+        height: 380px;
+    }
+}
+
+@media (max-width:767.98px) {
+    /* img[Alt="some error"]
+    {
+        height: 266px;
+        width: 266px;
+    } */
 }
