@@ -38,3 +38,66 @@ $(document).ready(function () {
   });
 });
 
+
+ $(document).ready(function () {
+$('.slick2').slick({
+  centerMode: true,
+  dots:true,
+  arrows:false,
+  dotsclass:'slick2-dots',
+  centerPadding: '60px',
+  slidesToShow: 1.58,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+});
+
+
+$(document).ready(function () {
+  $('.customer-review').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+    prevArrow: $('#prev-arrow'),
+    nextArrow: $('#next-arrow'),
+
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots:true,
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          dots:true,
+          slidesToShow: 1
+        }
+      }
+    ]
+
+  });
+});
