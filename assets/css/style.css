@@ -83,7 +83,7 @@
         background-color: white;
         border-radius: 21px;
         transition: 200ms linear width;
-        bottom: -88px;
+        bottom: -48px;
     }
 
     .slick-dots li.slick-active {
